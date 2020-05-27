@@ -103,7 +103,7 @@ class Parser():
 
                 # check for markers
                 if tag in markers:  # pylint: disable=undefined-variable
-                    value = elem.find('value')
+                    value = elem.find('display_value')
 
                     # check value for none -- sometimes the value will be None
                     if value is None:
@@ -113,7 +113,7 @@ class Parser():
                         # sometimes the text will be none
                         row_object[tag] = "'" + value_text + "'" if value_text is not None else None
 
-                elif tag not in ('link', 'value'):
+                elif tag not in ('link', 'display_value'):
                     row_object[tag] = "'" + str(text).strip() + "'" if text is not None else None # the text of some tags are none for example  <hold_reason />, <approval_history /> e.tc.
 
             elif event == 'end':

@@ -161,7 +161,8 @@ class ServiceNowToGenericTransferOperator(BaseOperator):
                     str(self.from_time.time()),
                     str(self.to_time.date()),
                     str(self.to_time.time())
-                )
+                ),
+                'sysparm_display_value':'true'
             }
         )
         LoggingMixin().log.warning("backup folder :" + self.DIR_BACKUP_PATH)
