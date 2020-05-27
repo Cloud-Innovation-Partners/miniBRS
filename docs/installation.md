@@ -89,6 +89,9 @@ Once you activate your virtual environment you can start Airflow webserver and s
 ~$ airflow scheduler
 ``` 
 
+After you have finished the installation process and you have started airflow webserver and scheduler. 
+You can access **`miniBRS`** UI via [**`http://locahost:8080`**](http://locahost:8080)
+
 ---
 
 Manual Installation
@@ -258,6 +261,8 @@ Manual Installation
             
             ~$ airflow scheduler
             
+12. **Access miniBRS UI:** After you have finished the installation process and you have started airflow webserver and scheduler. 
+    You can access **`miniBRS`** UI via [**`http://locahost:8080`**](http://locahost:8080)
             
 **Important Notes:**
 

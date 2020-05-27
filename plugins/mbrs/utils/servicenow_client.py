@@ -461,6 +461,3 @@ class ServiceNowAPIException(ServiceNowException):
         else:
             return "ServiceNowAPIException has been raised"
 
-if __name__ == '__main__':
-    serviceclient=ServiceNowClient(host='https://dev82663.service-now.com',login='admin',password='Flipkart@36')
-    print(list(serviceclient.table_schema('incident')))

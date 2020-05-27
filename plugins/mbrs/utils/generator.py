@@ -278,6 +278,9 @@ def create_dags():
     email_notify_required = is_email_notification_required()
 
     try:
+        if not isinstance(config.get('tables'),list):
+            raise InvalidTableName("`tables` attribute of `config` variable should be Array not string or interger")
+
         regex = re.compile('[@=+!#$%^&*()<>?/\|}{~:;]')
         for table in config.get('tables'):
             if regex.search(table) is None and ',' not in table\
